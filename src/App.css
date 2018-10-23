@@ -1,5 +1,30 @@
+body {
+  animation: colorchange 50s infinite; /* animation-name followed by duration in seconds*/
+     /* you could also use milliseconds (ms) or something like 2.5s */
+  -webkit-animation: colorchange 50s infinite; /* Chrome and Safari */
+}
+
+@keyframes colorchange
+{
+  0%   {background: red;}
+  25%  {background: yellow;}
+  50%  {background: blue;}
+  75%  {background: green;}
+  100% {background: red;}
+}
+
+@-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
+{
+  0%   {background: red;}
+  25%  {background: yellow;}
+  50%  {background: blue;}
+  75%  {background: green;}
+  100% {background: red;}
+}
+
 .App {
   text-align: center;
+  padding: 15px
 }
 
 .App-logo {
@@ -8,7 +33,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,6 +41,17 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-bg {
+  /* background-image: url('./images/bg.jpg');
+  background-size: cover; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
 }
 
 .App-link {
@@ -29,4 +65,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.quote-body{
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  color: #0C3564;
+  -webkit-box-shadow: 0px 7px 25px -8px rgba(92,92,92,1);
+  -moz-box-shadow: 0px 7px 25px -8px rgba(92,92,92,1);
+  box-shadow: 0px 7px 25px -8px rgba(92,92,92,1);
 }
