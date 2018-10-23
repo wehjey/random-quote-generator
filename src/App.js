@@ -50,6 +50,7 @@ class App extends Component {
   render() {
     return (
       <div className="App App-bg">
+        <h1 className="text-white">Random Quote Generator</h1>
           <Quote stopTimer={this.stopTimer} startTimer={this.startTimer} quote={this.state.quote} author={this.state.author} />
       </div>
     );
